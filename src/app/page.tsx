@@ -1,3 +1,4 @@
+import LandingPage from "components/LandingPage";
 import Video from "components/Video";
 import Link from "next/link";
 
@@ -10,11 +11,13 @@ export default async function Home() {
   void api.post.getLatest.prefetch();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center text-black">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-7xl font-bold">Video Share</h1>
-        <Video />
-      </div>
+    <main
+      data-theme="black"
+      className="flex min-h-screen flex-col scroll-smooth"
+    >
+      <section className="flex min-h-screen items-center justify-center">
+        <LandingPage />
+      </section>
     </main>
   );
 }
