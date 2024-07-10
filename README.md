@@ -4,7 +4,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## What's next? How do I make an app with this?
 
-I hated keep getting video links from social media but whenever i want to watch them i needed to be logged in or register so this is what i wanted to change just make a simple 1 pager where u can paste your link and just watch the funny video u wanted to watch without have to login 
+I hated keep getting video links from social media but whenever i want to watch them i needed to be logged in or register so this is what i wanted to change just make a simple 1 pager where u can paste your link and just watch the funny video u wanted to watch without have to login i realised that u can rewatch instagram videos infinite if u remove the username in a link
 
 If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
