@@ -2,6 +2,7 @@ import React from "react";
 import Video from "./Video";
 
 function LandingPage() {
+  const arrow = "--->";
   return (
     <div className="mx-auto flex flex-col items-center justify-center gap-16 bg-gray-900 px-6 py-12 text-white sm:px-8 lg:flex-row lg:justify-between lg:px-20 xl:px-32">
       <div className="h-2 w-full bg-gradient-to-r from-orange-500 to-red-500"></div>
@@ -23,7 +24,7 @@ function LandingPage() {
           href=""
           className="btn btn-wide flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 text-lg font-bold text-white transition duration-300 ease-in-out hover:from-orange-500 hover:to-red-500 hover:text-white"
         >
-          Start Watching<span className="ml-2">&#8594;</span>
+          Start Watching<span className="ml-2">{arrow}</span>
         </a>
       </div>
       <div className="relative w-full max-w-3xl">
