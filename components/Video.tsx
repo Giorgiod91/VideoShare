@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
-import { InstagramEmbed } from "react-social-media-embed";
+import { InstagramEmbed, TikTokEmbed } from "react-social-media-embed";
 
 type Props = {};
 
@@ -70,6 +70,11 @@ function Video({}: Props) {
                   className="overflow-hidden rounded-lg"
                   captioned
                 />
+              </div>
+            ) : null}
+            {input.includes("tiktok.com") ? (
+              <div className="flex h-[450px] justify-center pb-3">
+                <TikTokEmbed url={getEmbedURL(input)} />
               </div>
             ) : null}
           </motion.div>
