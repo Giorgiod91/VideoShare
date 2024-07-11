@@ -12,6 +12,10 @@ function Video({}: Props) {
 
   // Function to remove the username from the instagram URL
   const processInstagramURL = (url: string) => {
+    // Check if the URL contains "/reel/"
+    if (url.includes("/reel/")) {
+      return url;
+    }
     const regex = /https:\/\/www\.instagram\.com\/[^/]+\//;
     return url.replace(regex, "https://www.instagram.com/");
   };
@@ -34,7 +38,7 @@ function Video({}: Props) {
   //   </a>
 
   return (
-    <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-red-500 bg-white p-4 shadow-lg">
+    <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-neutral bg-white p-4 shadow-lg">
       <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg pt-10 shadow-lg">
         <div
           className="tooltip tooltip-open rounded-lg bg-black p-2 text-white"
@@ -74,11 +78,11 @@ function Video({}: Props) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter video URL"
-            className="w-full max-w-[400px] rounded border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full max-w-[400px] rounded border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
           <button
             onClick={handleRewatch}
-            className="btn-wide ml-4 rounded-md bg-red-500 p-2 text-white shadow-md hover:bg-red-600 lg:ml-2"
+            className="btn-wide ml-4 rounded-md bg-gradient-to-r from-red-500 to-orange-500 p-2 text-white shadow-md lg:ml-2"
           >
             ReWatch
           </button>
