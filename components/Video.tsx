@@ -10,16 +10,17 @@ function Video({}: Props) {
   const [input, setInput] = useState("");
   const [refreshKey, setRefreshKey] = useState(0);
 
-  // Function to remove the username from the instagram URL
+  // Function to remove the username from the Instagram URL
   const processInstagramURL = (url: string) => {
-    // Check if the URL contains "/reel/"
-    if (url.includes("/reel/")) {
-      return url;
+    const reelRegex = /https:\/\/www\.instagram\.com\/[^/]+\/reel\/([^/]+)/;
+    if (reelRegex.test(url)) {
+      const match = url.match(reelRegex);
+      if (match) {
+        return `https://www.instagram.com/reel/${match[1]}/`;
+      }
     }
-    const regex = /https:\/\/www\.instagram\.com\/[^/]+\//;
-    return url.replace(regex, "https://www.instagram.com/");
+    return url;
   };
-
   const getEmbedURL = (url: string) => {
     if (url.includes("instagram.com")) {
       return processInstagramURL(url);
@@ -30,12 +31,9 @@ function Video({}: Props) {
   const handleRewatch = () => {
     setRefreshKey((prevKey) => prevKey + 1); // Increment the key to force re-render
   };
-  // im giving the motion div a key to force re-render when the key changes
 
   // TODO: Add support for more video platforms
-  //TODO: add this button   <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600">
-  //     Show Video
-  //   </a>
+  // TODO: add this button <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600"> Show Video </a>
 
   return (
     <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-neutral bg-white p-4 shadow-lg">
