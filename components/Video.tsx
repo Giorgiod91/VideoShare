@@ -32,6 +32,10 @@ function Video({}: Props) {
     setRefreshKey((prevKey) => prevKey + 1); // Increment the key to force re-render
   };
 
+  const resetButton = () => {
+    setInput("");
+  };
+
   // TODO: Add support for more video platforms
   // TODO: add this button <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600"> Show Video </a>
 
@@ -83,6 +87,12 @@ function Video({}: Props) {
             className="btn-wide ml-4 rounded-md bg-gradient-to-r from-red-500 to-orange-500 p-2 text-white shadow-md lg:ml-2"
           >
             ReWatch
+          </button>
+          <button
+            onClick={resetButton}
+            className="btn-wide ml-4 rounded-md bg-gradient-to-r from-red-500 to-orange-500 p-2 text-white shadow-md lg:ml-2"
+          >
+            Reset
           </button>
         </div>
       </div>
