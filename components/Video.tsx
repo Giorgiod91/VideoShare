@@ -4,9 +4,7 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import { InstagramEmbed, TikTokEmbed } from "react-social-media-embed";
 
-type Props = {};
-
-function Video({}: Props) {
+function Video() {
   const [input, setInput] = useState("");
   const [refreshKey, setRefreshKey] = useState(0);
 

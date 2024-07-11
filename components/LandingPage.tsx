@@ -1,9 +1,7 @@
 import React from "react";
 import Video from "./Video";
 
-type Props = {};
-
-function LandingPage({}: Props) {
+function LandingPage() {
   return (
     <div className="mx-auto flex flex-col items-center justify-center gap-16 bg-gray-900 px-6 py-12 text-white sm:px-8 lg:flex-row lg:justify-between lg:px-20 xl:px-32">
       <div className="h-2 w-full bg-gradient-to-r from-orange-500 to-red-500"></div>
