@@ -28,12 +28,21 @@ function Video({}: Props) {
   };
   // im giving the motion div a key to force re-render when the key changes
 
+  // TODO: Add support for more video platforms
+  //TODO: add this button   <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600">
+  //     Show Video
+  //   </a>
+
   return (
-    <div className="border-primary relative mx-auto h-[600px] max-h-screen w-[700px] rounded-xl border-4 border-red-500 bg-white p-4 shadow-lg">
-      <div className="display flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg pt-10 shadow-lg">
-        <div className="h-full w-full">
+    <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-red-500 bg-white p-4 shadow-lg">
+      <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg pt-10 shadow-lg">
+        <div
+          className="tooltip tooltip-open rounded-lg bg-black p-2 text-white"
+          data-tip="tap in the middle of the video to play/pause"
+        ></div>
+        <div className="relative w-full">
           <motion.div
-            className="h-full w-full overflow-hidden rounded-lg"
+            className="overflow-hidden rounded-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -43,39 +52,37 @@ function Video({}: Props) {
               <ReactPlayer
                 url={getEmbedURL(input)}
                 width="100%"
-                height="100%"
+                height={450}
                 controls
                 className="overflow-hidden rounded-lg"
               />
             ) : null}
             {input.includes("instagram.com") ? (
-              <div className="h-full w-full">
+              <div className="flex h-[450px] justify-center pb-3">
                 <InstagramEmbed
                   url={getEmbedURL(input)}
-                  width="100%"
-                  height="100%"
                   className="overflow-hidden rounded-lg"
+                  captioned
                 />
               </div>
             ) : null}
           </motion.div>
         </div>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter video URL"
-          className="mt-4 w-11/12 rounded border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600">
-          Show Video
-        </a>
-        <button
-          onClick={handleRewatch}
-          className="absolute rounded-md bg-red-500 p-2 text-white shadow-md hover:bg-red-600 lg:right-2 lg:top-2"
-        >
-          ReWatch
-        </button>
+        <div className="mt-4 flex w-full justify-center">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Enter video URL"
+            className="w-full max-w-[400px] rounded border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            onClick={handleRewatch}
+            className="btn-wide ml-4 rounded-md bg-red-500 p-2 text-white shadow-md hover:bg-red-600 lg:ml-2"
+          >
+            ReWatch
+          </button>
+        </div>
       </div>
     </div>
   );
