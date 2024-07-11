@@ -17,7 +17,7 @@ function LandingPage() {
           Watch Videos from Instagram, YouTube, Tiktok
         </h2>
         <p className="mb-8 text-lg leading-relaxed opacity-80">
-          Watch videos without the hassle of logging in. You're in the right
+          Watch videos without the hassle of logging in. You are in the right
           place.
         </p>
         <a
