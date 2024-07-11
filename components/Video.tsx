@@ -40,7 +40,7 @@ function Video({}: Props) {
   // TODO: add this button <a className="btn btn-wide mt-4 flex items-center justify-center rounded-md bg-gradient-to-r from-pink-500 to-red-500 p-2 text-white shadow-lg hover:from-pink-600 hover:to-red-600"> Show Video </a>
 
   return (
-    <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-neutral bg-white p-4 shadow-lg">
+    <div className="relative mx-auto flex max-h-screen w-[490px] flex-col items-center justify-center rounded-xl border-4 border-orange-400 bg-white p-4 shadow-lg">
       <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg pt-10 shadow-lg">
         <div
           className="tooltip tooltip-open rounded-lg bg-black p-2 text-white"

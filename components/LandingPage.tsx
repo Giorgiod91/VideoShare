@@ -15,7 +15,7 @@ function LandingPage({}: Props) {
           </span>
         </h1>
         <h2 className="mb-8 text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">
-          Watch Videos from Instagram or YouTube
+          Watch Videos from Instagram, YouTube, Tiktok
         </h2>
         <p className="mb-8 text-lg leading-relaxed opacity-80">
           Watch videos without the hassle of logging in. You're in the right
@@ -25,7 +25,7 @@ function LandingPage({}: Props) {
           href=""
           className="btn btn-wide flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 text-lg font-bold text-white transition duration-300 ease-in-out hover:from-orange-500 hover:to-red-500 hover:text-white"
         >
-          Explore Now <span className="ml-2">&#8594;</span>
+          Start Watching<span className="ml-2">&#8594;</span>
         </a>
       </div>
       <div className="relative w-full max-w-3xl">
