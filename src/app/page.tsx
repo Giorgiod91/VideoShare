@@ -1,4 +1,3 @@
-import Footer from "components/Footer";
 import LandingPage from "components/LandingPage";
 import Video from "components/Video";
 import Link from "next/link";
